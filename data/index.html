@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Color picker</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/colorpicker.css">
+    <script type="text/javascript" src="js/jquery_min.js"></script>
+    <script type="text/javascript" src="js/colorpicker.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+</head>
+
+<body>
+    <nav>
+        <p>LED control panel</p>
+    </nav>
+    <div id="buttons">
+        <h1>Effects</h1>
+        <div onclick="sendCommand(0)" class="effect">
+            <h2>None</h2>
+        </div>
+        <div onclick="sendCommand(1)" class="effect">
+            <h2>Fire</h2>
+        </div>
+        <div onclick="sendCommand(2)" class="effect">
+            <h2>Alarm</h2>
+        </div>
+    </div>
+    <div class="wrap">
+        <div class="half">
+            <div class="colorPicker"></div>
+
+            <label class="switch">
+                <input onclick="power()" id="switch" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <footer id="footer">
+        <p id="status">Disconnected</p>
+        <div id="indicator"></div>
+    </footer>
+</body>
+
+</html>
